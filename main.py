@@ -18,10 +18,11 @@ def query_huggingface_model(text, nprompt, steps):
         "inputs": text,
         "negative_prompt": nprompt,
         "num_inference_steps": steps,
-        "seed": 1627275462,
-        "guidance_scale": 6.5,
-        "Sampler": "Eular",
-    }
+        "seed": 773727747,
+        "guidance_scale": 6,
+        "Sampler": "DPM++ 2M Karras",
+
+}
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.content
 
